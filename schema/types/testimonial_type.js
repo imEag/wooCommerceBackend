@@ -1,7 +1,7 @@
 const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLList } = graphql;
 
-const TestimonialType = GraphQLObjectType({
+const TestimonialType = new GraphQLObjectType({
     name: 'TestimonialType',
     fields: () => ({
         id: { type: GraphQLID },
