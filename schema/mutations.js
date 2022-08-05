@@ -17,8 +17,7 @@ const mutation = new GraphQLObjectType({
                 content: { type: GraphQLString }
             },
             resolve(parentValue, { id, content }) {
-                let date_now = Date.now();
-                date_now = date_now.toString()
+                let date_now = new Date(Date.now());
                 return (new Testimonial({ id, content, date: date_now })).save();
             }
         },
