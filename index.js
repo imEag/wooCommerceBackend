@@ -26,7 +26,7 @@ db()
 
 //MIDDLEWARES
 app.use('/', bodyParser.json());
-app.use('/graphql', expressGraphQL({
+app.use('/', expressGraphQL({
     schema,
     graphiql: true
 }));
