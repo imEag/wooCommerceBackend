@@ -14,11 +14,12 @@ const mutation = new GraphQLObjectType({
         createTestimonial: {
             type: TestimonialType,
             args: {
-                content: { type: GraphQLString },
-                date: { type: GraphQLString }
+                content: { type: GraphQLString }
             },
-            resolve(parentValue, { id, content, date }) {
-                return (new Testimonial({ id, content, date })).save();
+            resolve(parentValue, { id, content }) {
+                let date_now = Date.now();
+                date_now = date_now.toString()
+                return (new Testimonial({ id, content, date: date_now })).save();
             }
         },
         deleteTestimonial: {
