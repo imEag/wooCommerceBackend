@@ -1,7 +1,7 @@
 # wooCommerceBackend
 Backend API for WooCommerce Project
 
-## [Use the app here](https://rickandmortygenerator.site/woocommerce)
+## [Use the app here](https://imeag.site/woocommerce)
 
 ## Features
 
